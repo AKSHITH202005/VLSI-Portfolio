@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Simulation files
+*.vcd
+*.vvp
+*.fst
+*.log
+
+# Verilator
+obj_dir/
+*.d
+*.o
+
+# Temporary files
+*.tmp
+*.swp
+
+# Backup files
+*~
