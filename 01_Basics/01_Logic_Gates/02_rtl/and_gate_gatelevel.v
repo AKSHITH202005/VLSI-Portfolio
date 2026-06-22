@@ -1,9 +1,9 @@
 module and_gate_gatelevel(
-    input a,
-    input b,
-    output y
+    input  wire a,
+    input  wire b,
+    output wire y
 );
 
-and(y, a, b);
+    and (y, a, b);
 
 endmodule

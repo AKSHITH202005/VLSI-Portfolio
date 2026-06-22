@@ -1,8 +1,9 @@
-module and_gate(
-    input a,
-    input b,
-    output y
+module and_gate_dataflow(
+    input  wire a,
+    input  wire b,
+    output wire y
 );
 
-assign y = a & b;
+    assign y = a & b;
+
 endmodule
