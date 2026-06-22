@@ -1,40 +1,40 @@
 # Logic Gates Library
 
-## Description
+## Completed
 
-This project implements the basic digital logic gates using Verilog HDL.
+- ✅ AND Gate
 
-## Gates
+## In Progress
 
-- AND
-- OR
-- NOT
-- NAND
-- NOR
-- XOR
-- XNOR
+- OR Gate
+- NOT Gate
+- NAND Gate
+- NOR Gate
+- XOR Gate
+- XNOR Gate
+
+## Folder Structure
+
+01_docs
+
+02_rtl
+
+03_tb
+
+04_waveforms
+
+05_reports
+
+06_diagrams
 
 ## Tools
 
+- Verilog HDL
 - Icarus Verilog
 - Verilator
 - Git
 - GitHub
 
-## Project Structure
-
-01_docs → Documentation
-
-02_rtl → RTL Source
-
-03_tb → Testbench
-
-04_waveforms → Simulation Results
-
-05_reports → Reports
-
-06_diagrams → Diagrams
-
 ## Status
 
-🚧 In Progress
+🚀 Project Started
