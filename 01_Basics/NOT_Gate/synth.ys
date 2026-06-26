@@ -1,0 +1,12 @@
+read_verilog rtl/not_gate_dataflow.v
+
+hierarchy -top not_gate_dataflow
+
+proc
+opt
+techmap
+opt
+
+stat
+
+write_verilog reports/not_gate_netlist.v
