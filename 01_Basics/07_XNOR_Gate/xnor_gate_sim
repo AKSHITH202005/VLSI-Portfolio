@@ -1,0 +1,63 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x1057cd710 .scope module, "xnor_gate_tb" "xnor_gate_tb" 2 3;
+ .timescale -9 -12;
+v0x1057d2a30_0 .var "A", 0 0;
+v0x1057d2ad0_0 .var "B", 0 0;
+v0x1057d2b70_0 .net "Y", 0 0, L_0x1057cd980;  1 drivers
+S_0x1057cc9a0 .scope module, "uut" "xnor_gate_dataflow" 2 10, 3 1 0, S_0x1057cd710;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0x1057ccc60 .functor XOR 1, v0x1057d2a30_0, v0x1057d2ad0_0, C4<0>, C4<0>;
+L_0x1057cd980 .functor NOT 1, L_0x1057ccc60, C4<0>, C4<0>, C4<0>;
+v0x1057ccb20_0 .net "A", 0 0, v0x1057d2a30_0;  1 drivers
+v0x1057ccbc0_0 .net "B", 0 0, v0x1057d2ad0_0;  1 drivers
+v0x1057d28f0_0 .net "Y", 0 0, L_0x1057cd980;  alias, 1 drivers
+v0x1057d2990_0 .net *"_ivl_0", 0 0, L_0x1057ccc60;  1 drivers
+    .scope S_0x1057cd710;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "04_waveforms/xnor_gate.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x1057cd710 {0 0 0};
+    %vpi_call 2 20 "$display", "A B Y" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1057d2a30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1057d2ad0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 22 "$display", "%b %b %b", v0x1057d2a30_0, v0x1057d2ad0_0, v0x1057d2b70_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1057d2a30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1057d2ad0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 23 "$display", "%b %b %b", v0x1057d2a30_0, v0x1057d2ad0_0, v0x1057d2b70_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1057d2a30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1057d2ad0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 24 "$display", "%b %b %b", v0x1057d2a30_0, v0x1057d2ad0_0, v0x1057d2b70_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1057d2a30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1057d2ad0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 25 "$display", "%b %b %b", v0x1057d2a30_0, v0x1057d2ad0_0, v0x1057d2b70_0 {0 0 0};
+    %vpi_call 2 27 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "03_tb/xnor_gate_tb.v";
+    "02_rtl/xnor_gate_dataflow.v";

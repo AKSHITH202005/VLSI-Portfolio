@@ -1,0 +1,13 @@
+read_verilog 02_rtl/xnor_gate_dataflow.v
+
+hierarchy -top xnor_gate_dataflow
+
+proc
+
+opt
+
+techmap
+
+opt
+
+write_verilog 05_reports/xnor_gate_netlist.v
