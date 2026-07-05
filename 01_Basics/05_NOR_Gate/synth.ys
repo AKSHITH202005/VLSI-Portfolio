@@ -1,0 +1,13 @@
+read_verilog 02_rtl/nor_gate_dataflow.v
+
+hierarchy -top nor_gate_dataflow
+
+proc
+
+opt
+
+techmap
+
+opt
+
+write_verilog 05_reports/nor_gate_netlist.v
